@@ -11,13 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware'=>'kucaGuard'],function (){
+    Route::get('/login','LoginController@index');
+    Route::post('/login','LoginController@loginUp');
 });
-Route::get('index', 'AdminController@index');
-Route::get('login', 'LoginController@index');
-Route::get('register', 'LoginController@create');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');

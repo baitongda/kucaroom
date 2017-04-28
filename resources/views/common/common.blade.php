@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 </head>
+<style>
+
+</style>
 <body>
 <div class="page-group">
 @yield('content')

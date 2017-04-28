@@ -101,6 +101,25 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'username'=>[
+            'required' => '用户名不能为空',
+            'min'      => '用户名范围6-16个字段',
+            'max'      => '用户名范围6-16个字段',
+            'unique'   => '用户名已被注册',
+        ],
+        'email' => [
+            'required' => '邮箱不能为空',
+            'unique'   => '邮箱已被注册',
+        ],
+        'psw' => [
+            'required'  => '密码不能为空',
+            'min'       => '密码范围6-16个字段',
+            'max'       => '密码范围6-16个字段',
+            'confirmed' => '两次输入密码不一致',
+        ],
+        'password_confirmation' => [
+            'required'  => '确认密码不能为空',
+        ],
     ],
 
     /*
